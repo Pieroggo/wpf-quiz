@@ -10,7 +10,7 @@ aplikację rozwiązywania quizu.</li>
 <li>tworzenie nowego quizu o zadanej nazwie</li>
 <li>dodawanie, usuwanie, modyfikacja pytań należących do danego quizu</li>
 <li>zapis quizu do bazy danych Sqlite</li>
-<li>wczytanie istniej¡cego quizu z bazy danych Sqlite</li>
+<li>wczytanie istniejącego quizu z bazy danych Sqlite</li>
 <li>przyjazny interfejs chroniący przed popełnieniem pomyłek.</li></ul></li>
 <li>Pytanie posiada cztery odpowiedzi, z czego przynajmniej jedna jest poprawna (pytanie
 wielokrotnego wyboru).</li>
