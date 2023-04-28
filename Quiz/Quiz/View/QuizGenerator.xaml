@@ -7,6 +7,13 @@
         mc:Ignorable="d"
         Title="QuizGenerator" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox Grid.Column="0" Background="Blue">
+        </ListBox>
+        <Grid Grid.Column="1" Background="Red">
+        </Grid>
     </Grid>
 </Window>

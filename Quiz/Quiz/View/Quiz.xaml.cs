@@ -26,6 +26,6 @@ namespace Quiz.View
     }
     //Quiz: baza danych
     //Tabela: Quiz ->(Id,Nazwa)
-    //        Pytania -> (Id,Nazwa, Odp1,Odp2,Odp3,Odp4,WłaściwaOdp(binarna liczba))
-    //        Connect -> (IdPrzypisania,IdQuiz, IdPytania)
+    //        Pytania -> (Id,Nazwa, Odp1,Odp2,Odp3,Odp4,WłaściwaOdp(binarna liczba),IdQuiz)
+    //        
 }
