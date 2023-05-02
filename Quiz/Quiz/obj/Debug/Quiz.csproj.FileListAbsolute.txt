@@ -16,3 +16,33 @@ C:\Users\maz2g\OneDrive\Desktop\Studia\Sem 4\Programowanie Obiektowe i Graficzne
 C:\Users\maz2g\OneDrive\Desktop\Studia\Sem 4\Programowanie Obiektowe i Graficzne\Lab 4 - Quiz\Quiz\Quiz\obj\Debug\Quiz.csproj.CoreCompileInputs.cache
 C:\Users\maz2g\OneDrive\Desktop\Studia\Sem 4\Programowanie Obiektowe i Graficzne\Lab 4 - Quiz\Quiz\Quiz\obj\Debug\Quiz.exe
 C:\Users\maz2g\OneDrive\Desktop\Studia\Sem 4\Programowanie Obiektowe i Graficzne\Lab 4 - Quiz\Quiz\Quiz\obj\Debug\Quiz.pdb
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\bin\Debug\x86\sqlite3.dll
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\bin\Debug\x64\sqlite3.dll
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\bin\Debug\Quiz.exe.config
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\bin\Debug\Quiz.exe
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\bin\Debug\Quiz.pdb
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\bin\Debug\EntityFramework.dll
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\bin\Debug\EntityFramework.SqlServer.dll
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\bin\Debug\System.Data.SQLite.dll
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\bin\Debug\EntityFramework.xml
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\bin\Debug\EntityFramework.SqlServer.xml
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\bin\Debug\System.Data.SQLite.xml
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\Quiz.csproj.AssemblyReference.cache
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\Quiz.csproj.SuggestedBindingRedirects.cache
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\View\Quiz.g.cs
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\View\QuizGenerator.g.cs
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\App.g.cs
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\Quiz_Content.g.cs
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\Quiz_MarkupCompile.cache
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\Quiz_MarkupCompile.lref
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\View\Quiz.baml
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\View\QuizGenerator.baml
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\Quiz.g.resources
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\Quiz.Properties.Resources.resources
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\Quiz.csproj.GenerateResource.cache
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\Quiz.csproj.CoreCompileInputs.cache
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\Quiz.csproj.CopyComplete
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\Quiz.exe
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\Quiz.pdb
