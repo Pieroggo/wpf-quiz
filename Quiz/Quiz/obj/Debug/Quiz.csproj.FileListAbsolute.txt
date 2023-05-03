@@ -46,3 +46,5 @@ D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug
 D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\Quiz.csproj.CopyComplete
 D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\Quiz.exe
 D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\Quiz.pdb
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\Quiz.g.cs
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\QuizGenerator.g.cs
