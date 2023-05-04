@@ -9,7 +9,7 @@ namespace WPFQuiz.Model
 {
     static class DataAccess
     {
-        static SQLiteConnection conn = new SQLiteConnection(@"Data Source=..\quizzesbase.db;Version=3");
+        static SQLiteConnection conn = new SQLiteConnection(@"Data Source=..\..\..\..\quizzesbase.db;Version=3");
 
 
         private static void ReadData(SQLiteConnection conn)

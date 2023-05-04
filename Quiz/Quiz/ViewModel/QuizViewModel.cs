@@ -26,6 +26,7 @@ namespace WPFQuiz.ViewModel
 
             DataAccess.ReadData();
         }
+
         private string quizTitle = "Quiz: {nazwa quizu}";
         public string QuizTitle
         {
@@ -36,6 +37,7 @@ namespace WPFQuiz.ViewModel
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(QuizTitle)));
             }
         }
+
         private string score = "Wynik: {wynik}";
         public string Score
         {
@@ -46,6 +48,7 @@ namespace WPFQuiz.ViewModel
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Score)));
             }
         }
+
         private string quizTime = "Wynik: {wynik}";
         public string QuizTime
         {
