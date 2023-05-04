@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.ComponentModel;
 using System.Windows.Input;
 
-namespace WPFQuiz.ViewModel
+namespace QuizGenerator.ViewModel
 {
 
     class RelayCommand : ICommand

@@ -79,8 +79,7 @@
     <Compile Include="Model\QuizInstance.cs" />
     <Compile Include="ViewModel\QuizGeneratorViewModel.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
-    <Compile Include="ViewModel\VisibilityViewModel.cs" />
-    <Page Include="MainWindow.xaml">
+    <Page Include="QuizGen.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -90,8 +89,8 @@
     </Compile>
     <Compile Include="Model\DataAccess.cs" />
     <Compile Include="Model\MainModel.cs" />
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="QuizGen.xaml.cs">
+      <DependentUpon>QuizGen.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
