@@ -18,15 +18,23 @@ namespace WPFQuiz.Model
             SQLiteCommand command;
 
             command = conn.CreateCommand();
-            command.CommandText = "SELECT * FROM Quizzes";
+            command.CommandText = "SELECT Quizzes.Id AS QuizID ,Quizzes.QuizName, Questions.Id AS QuestionID, Questions.Question, Questions.Answer1, Questions.Answer2, Questions.Answer3, Questions.Answer4, Questions.RightAnswer FROM Quizzes INNER JOIN Questions ON Quizzes.Id = Questions.QuizID";
             reader = command.ExecuteReader();
 
             while (reader.Read())
             {
-                long id = (long)reader["id"];
+                long quizid = (long)reader["quizid"];
                 string quizname = (string)reader["quizname"];
+                long questionid = (long)reader["questionid"];
+                string question = (string)reader["question"];
+                string answer1 = (string)reader["answer1"];
+                string answer2 = (string)reader["answer2"];
+                string answer3 = (string)reader["answer3"];
+                string answer4 = (string)reader["answer4"];
+                long rightanswer = (long)reader["rightanswer"];
                 //kolejne atyrbuty
-                Console.WriteLine($"{id} {quizname}");
+
+                Console.WriteLine($"{quizid} {quizname} {questionid} {question} {answer1} {answer2} {answer3} {answer4} {rightanswer}");
             }
 
 
