@@ -9,23 +9,22 @@ using System.Timers;
 using System.Windows;
 using System.Windows.Documents;
 using System.Windows.Input;
+using WPFQuiz.Model;
 
 namespace WPFQuiz.ViewModel
 {
     internal class QuizViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        private Quiz currentQuiz;
+        private QuizInstance currentQuiz;
         private int correctAnswers;
-        private QuizGeneratorViewModel generatorVM=new QuizGeneratorViewModel();
-        private QuizGenerator generator=new QuizGenerator();
         private System.Timers.Timer quizTimer;
-        public static Action OpenAction { get; set; }
-        public static Action CloseAction { get; set; }
-        private VisibilityViewModel vvm = new VisibilityViewModel();
+
         public QuizViewModel()
         {
             quizTimer = new System.Timers.Timer(1000);
+
+            DataAccess.ReadData();
         }
         private string quizTitle = "Quiz: {nazwa quizu}";
         public string QuizTitle

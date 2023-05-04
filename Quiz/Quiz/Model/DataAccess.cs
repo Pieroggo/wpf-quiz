@@ -9,7 +9,7 @@ namespace WPFQuiz.Model
 {
     static class DataAccess
     {
-        static SQLiteConnection conn = new SQLiteConnection(@"Data Source=database.db;Version=3");
+        static SQLiteConnection conn = new SQLiteConnection(@"Data Source=..\quizzesbase.db;Version=3");
 
 
         private static void ReadData(SQLiteConnection conn)
@@ -18,16 +18,15 @@ namespace WPFQuiz.Model
             SQLiteCommand command;
 
             command = conn.CreateCommand();
-            command.CommandText = "SELECT * FROM Tabela";
+            command.CommandText = "SELECT * FROM Quizzes";
             reader = command.ExecuteReader();
 
             while (reader.Read())
             {
                 long id = (long)reader["id"];
-                string imie = (string)reader["imie"];
-                string nazwisko = (string)reader["nazwisko"];
+                string quizname = (string)reader["quizname"];
                 //kolejne atyrbuty
-                Console.WriteLine($"{id} {imie} {nazwisko}");
+                Console.WriteLine($"{id} {quizname}");
             }
 
 
@@ -50,6 +49,7 @@ namespace WPFQuiz.Model
         {
 
         }
+
         public static void InsertData() {
             try
             {

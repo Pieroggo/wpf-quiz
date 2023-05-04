@@ -29,3 +29,32 @@ D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug
 D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\Quiz.exe
 D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\Quiz.pdb
 D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\Quiz\Quiz\obj\Debug\WPFQuiz.csproj.AssemblyReference.cache
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\Quiz\Quiz\obj\Debug\WPFQuiz.csproj.SuggestedBindingRedirects.cache
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\Quiz\Quiz\obj\Debug\Quiz.g.cs
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\Quiz\Quiz\obj\Debug\App.g.cs
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\Quiz\Quiz\obj\Debug\Quiz_Content.g.cs
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\Quiz\Quiz\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\Quiz\Quiz\obj\Debug\Quiz_MarkupCompile.cache
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\Quiz\Quiz\obj\Debug\Quiz_MarkupCompile.lref
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\Quiz\Quiz\obj\Debug\Quiz.exe
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\Quiz\Quiz\obj\Debug\Quiz.pdb
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\Quiz\Quiz\bin\Debug\x86\sqlite3.dll
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\Quiz\Quiz\bin\Debug\x64\sqlite3.dll
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\Quiz\Quiz\bin\Debug\Quiz.exe.config
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\Quiz\Quiz\bin\Debug\Quiz.exe
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\Quiz\Quiz\bin\Debug\Quiz.pdb
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\Quiz\Quiz\bin\Debug\EntityFramework.dll
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\Quiz\Quiz\bin\Debug\EntityFramework.SqlServer.dll
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\Quiz\Quiz\bin\Debug\System.Data.SQLite.dll
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\Quiz\Quiz\bin\Debug\System.Data.SQLite.EF6.dll
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\Quiz\Quiz\bin\Debug\System.Data.SQLite.Linq.dll
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\Quiz\Quiz\bin\Debug\EntityFramework.xml
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\Quiz\Quiz\bin\Debug\EntityFramework.SqlServer.xml
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\Quiz\Quiz\bin\Debug\System.Data.SQLite.xml
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\Quiz\Quiz\obj\Debug\Quiz.baml
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\Quiz\Quiz\obj\Debug\Quiz.g.resources
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\Quiz\Quiz\obj\Debug\Quiz.Properties.Resources.resources
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\Quiz\Quiz\obj\Debug\WPFQuiz.csproj.GenerateResource.cache
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\Quiz\Quiz\obj\Debug\WPFQuiz.csproj.CoreCompileInputs.cache
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\Quiz\Quiz\obj\Debug\WPFQuiz.csproj.CopyComplete
