@@ -22,9 +22,10 @@ namespace QuizGenerator.ViewModel
         {
             model = new MainModel();
             DataAccess.ReadData();
-            
-        }
-        private ObservableCollection<QuizInstance> quizList = new ObservableCollection<QuizInstance>();
+            quizList = MainModel.Quizy;
+    }
+
+        private ObservableCollection<QuizInstance> quizList;
         public ObservableCollection<QuizInstance> QuizList
         {
             get { return quizList; }
