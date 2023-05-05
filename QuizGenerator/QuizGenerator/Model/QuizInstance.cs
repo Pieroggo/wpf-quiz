@@ -34,7 +34,7 @@ namespace QuizGenerator.Model
 
         public override string ToString()
         {
-            string str="Quiz " +id + " - " + _name;
+            string str=id + " - " + _name;
             return str; 
         }
     }

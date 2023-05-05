@@ -18,13 +18,16 @@ namespace QuizGenerator.Model
         {
             get { return _quizy; }
         }
+
         public MainModel() { _quizy = new ObservableCollection<QuizInstance>(); }
         public MainModel(ObservableCollection<QuizInstance> list) { _quizy = list; }
+
         public static void MakeNewQuiz(long id, string quizName)
         {
             QuizInstance newQuiz = new QuizInstance(id,quizName,new ObservableCollection<Question>());
             _quizy.Add(newQuiz);
         }
+
         public static void InsertQuestion(Question question, long targetQuizId)
         {
             foreach(var quiz in _quizy)
@@ -35,6 +38,7 @@ namespace QuizGenerator.Model
             }
 
         }
+
         public static string ReturnContentString() {
             string ret = "";
             foreach (var quiz in _quizy) {

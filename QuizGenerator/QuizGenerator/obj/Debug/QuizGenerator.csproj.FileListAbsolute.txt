@@ -56,3 +56,7 @@ E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\Quiz
 E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\obj\Debug\QuizGenerator.csproj.CopyComplete
 E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\obj\Debug\QuizGenerator.exe
 E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\obj\Debug\QuizGenerator.pdb
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\bin\Debug\Microsoft.Expression.Interactions.dll
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\bin\Debug\System.Windows.Interactivity.dll
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\bin\Debug\Microsoft.Expression.Interactions.xml
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\bin\Debug\System.Windows.Interactivity.xml

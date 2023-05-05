@@ -64,17 +64,22 @@ namespace QuizGenerator.Model
                 Console.WriteLine(ex.Message);
             }
         }
-        private static void InsertData(SQLiteConnection conn)
+        private static void InsertData(SQLiteConnection conn, long quizid, string quizname, long questionid, string question, string answer1, string answer2, string answer3, string answer4, long rightanswer)
         {
+            SQLiteDataReader reader;
+            SQLiteCommand command;
 
+            command = conn.CreateCommand();
+            command.CommandText = "";
+            reader = command.ExecuteReader();
         }
 
-        public static void InsertData()
+        public static void InsertData(long quizid, string quizname, long questionid, string question, string answer1, string answer2, string answer3, string answer4, long rightanswer)
         {
             try
             {
                 conn.Open();
-                InsertData(conn);
+                InsertData(conn, quizid, quizname, questionid, question, answer1, answer2, answer3, answer4, rightanswer);
                 conn.Close();
             }
             catch (Exception ex)

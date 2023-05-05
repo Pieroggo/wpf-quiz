@@ -34,7 +34,18 @@ namespace QuizGenerator.ViewModel
                 quizList = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(QuizList)));
             }
-        }//ten bidning średnio działa, nie wiem czemu...
+        }
+
+        private ObservableCollection<Question> questionList;
+        public ObservableCollection<Question> QuestionList
+        {
+            get { return questionList; }
+            set
+            {
+                questionList = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(QuestionList)));
+            }
+        }
 
         private string quizTitle = "Podaj nazwę...";
         public string QuizTitle
@@ -46,6 +57,7 @@ namespace QuizGenerator.ViewModel
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(QuizTitle)));
             }
         }
+
         private string answerA = "Podaj odpowiedź A...";
         public string AnswerA
         {
@@ -109,6 +121,60 @@ namespace QuizGenerator.ViewModel
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(QuizQuestionAmount)));
             }
 
+        }
+
+        private ICommand addEmptyQuiz;
+        public ICommand AddEmptyQuiz
+        {
+            get 
+            { 
+                if (addEmptyQuiz == null)
+                {
+                    addEmptyQuiz = new RelayCommand(
+                        (o) =>
+                        {
+                            MainModel.MakeNewQuiz(QuizList.Count()+1, "Pusty Quiz");
+                        },
+                        (o) => true
+                        );
+                }
+
+                return addEmptyQuiz; 
+            }
+        }
+
+        private QuizInstance selectedQuiz;
+        public QuizInstance SelectedQuiz
+        {
+            get { return selectedQuiz; }
+            set
+            {
+                selectedQuiz = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(SelectedQuiz)));
+            }
+        }
+
+        
+
+        private ICommand setQuiz;
+        public ICommand SetQuiz
+        {
+            get
+            {
+                if (setQuiz == null)
+                {
+                    setQuiz = new RelayCommand(
+                        (o) =>
+                        {
+                            currentQuiz = SelectedQuiz;
+                            QuestionList = currentQuiz.Questions;
+                        },
+                        (o) => true
+                        );
+                }
+
+                return setQuiz;
+            }
         }
     }
 }
