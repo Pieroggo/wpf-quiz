@@ -22,6 +22,7 @@ namespace QuizGenerator.ViewModel
         {
             model = new MainModel();
             DataAccess.ReadData();
+            quizList = MainModel.Quizy;
             
         }
         private ObservableCollection<QuizInstance> quizList = new ObservableCollection<QuizInstance>();
@@ -33,7 +34,7 @@ namespace QuizGenerator.ViewModel
                 quizList = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(QuizList)));
             }
-        }//ten bidning średnio działa, nie wiem czemu...
+        }
 
         private string quizTitle = "Podaj nazwę...";
         public string QuizTitle

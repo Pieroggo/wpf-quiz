@@ -4,6 +4,7 @@ using System.Linq;
 using System.Data.SQLite;
 using System.Text;
 using System.Threading.Tasks;
+using WPFQuiz.Model;
 
 namespace WPFQuiz.Model
 {
@@ -33,9 +34,23 @@ namespace WPFQuiz.Model
                 string answer4 = (string)reader["answer4"];
                 long rightanswer = (long)reader["rightanswer"];
                 //kolejne atyrbuty
-
+                bool newQuiz = true;
+                foreach (QuizInstance quiz in MainModel.Quizy)
+                {
+                    if (quiz.ID == quizid)
+                    {
+                        newQuiz = false;
+                    }
+                }
+                if (newQuiz)
+                {
+                    MainModel.MakeNewQuiz(quizid, quizname);
+                }
+                MainModel.InsertQuestion(new Question(questionid, question, answer1, answer2, answer3, answer4, rightanswer), quizid);
                 Console.WriteLine($"{quizid} {quizname} {questionid} {question} {answer1} {answer2} {answer3} {answer4} {rightanswer}");
+
             }
+            Console.WriteLine(MainModel.ReturnContentString());
 
 
         }
@@ -58,7 +73,8 @@ namespace WPFQuiz.Model
 
         }
 
-        public static void InsertData() {
+        public static void InsertData()
+        {
             try
             {
                 conn.Open();

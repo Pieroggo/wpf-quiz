@@ -27,7 +27,7 @@ namespace QuizGenerator.Model
             _name = name;
             this.questions = questions;
         }
-        public string ToString()
+        public override string ToString()
         {
             string str="Quiz " + id + " - " + _name + " :\n";
             foreach(var item in questions)

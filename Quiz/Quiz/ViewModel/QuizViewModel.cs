@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
@@ -18,15 +19,26 @@ namespace WPFQuiz.ViewModel
         public event PropertyChangedEventHandler PropertyChanged;
         private QuizInstance currentQuiz;
         private int correctAnswers;
+        private MainModel model;
         private System.Timers.Timer quizTimer;
 
         public QuizViewModel()
         {
+            model = new MainModel();
             quizTimer = new System.Timers.Timer(1000);
-
             DataAccess.ReadData();
+            quizList = MainModel.Quizy;
         }
-
+        private ObservableCollection<QuizInstance> quizList = new ObservableCollection<QuizInstance>();
+        public ObservableCollection<QuizInstance> QuizList
+        {
+            get { return quizList; }
+            set
+            {
+                quizList = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(QuizList)));
+            }
+        }
         private string quizTitle = "Quiz: {nazwa quizu}";
         public string QuizTitle
         {
@@ -59,8 +71,12 @@ namespace WPFQuiz.ViewModel
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(QuizTime)));
             }
         }
-        
+        public void ReloadQuizList() { quizList = MainModel.Quizy; }
+        private ICommand onSelectionChanged;
+        public ICommand OnSelectionChanged {
 
+            get; set;
+        }
         
 
     }

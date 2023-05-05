@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:local="clr-namespace:WPFQuiz"
         xmlns:vm="clr-namespace:WPFQuiz.ViewModel"
         mc:Ignorable="d"
@@ -22,7 +23,12 @@
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <Label x:Name="quizListTitle" Grid.Column="0" Grid.Row="0" FontFamily="Arial" FontSize="25" Content="Lista Quizów" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
-        <ListBox Grid.Column="0" Grid.Row="1" Background="CadetBlue">
+        <ListBox Grid.Column="0" Grid.Row="1" Background="CadetBlue" ItemsSource="{Binding QuizList,UpdateSourceTrigger=PropertyChanged}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="SelectionChanged">
+                    <i:InvokeCommandAction Command="{Binding OnSelectionChanged}"/>
+                </i:EventTrigger>
+                </i:Interaction.Triggers> 
         </ListBox>
         <Grid Grid.Column="1" Grid.Row="0">
             <Grid.ColumnDefinitions>
