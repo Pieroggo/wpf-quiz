@@ -10,11 +10,17 @@ namespace WPFQuiz.Model
     {
         private long id;
         private string _questionText;
+        public string QuestionText { get { return _questionText; } }
         private string _answer1;
+        public string Answer1 { get {  return _answer1; } }
         private string _answer2;
+        public string Answer2 { get { return _answer2; } }
         private string _answer3;
+        public string Answer3 { get { return _answer3; } }
         private string _answer4;
+        public string Answer4 { get { return _answer4; } }
         private long _rightAnswer;
+        public bool[] Answers= { false, false, false, false };
 
         public Question()
         {
@@ -36,6 +42,13 @@ namespace WPFQuiz.Model
             _answer3 = a3;
             _answer4 = a4;
             _rightAnswer = right;
+            ListifyCorrectness();
+        }
+        private void ListifyCorrectness() {
+            if (_rightAnswer > 7) { Answers[0] = true; }
+            if (_rightAnswer % 8 > 3) { Answers[1] = true; }
+            if (_rightAnswer % 4 > 1) { Answers[2]= true; }
+            if (_rightAnswer % 2 == 1) { Answers[3] = true; }  
         }
         public override string ToString()
         {

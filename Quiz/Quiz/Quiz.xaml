@@ -20,10 +20,10 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="6*"/>
-            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Label x:Name="quizListTitle" Grid.Column="0" Grid.Row="0" FontFamily="Arial" FontSize="25" Content="Lista Quizów" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
-        <ListBox Grid.Column="0" Grid.Row="1" Background="CadetBlue" ItemsSource="{Binding QuizList,UpdateSourceTrigger=PropertyChanged}">
+        <ListBox Grid.Column="0" Grid.Row="1" Background="CadetBlue" ItemsSource="{Binding QuizList}" SelectedItem="{Binding SelectedQuiz}">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="SelectionChanged">
                     <i:InvokeCommandAction Command="{Binding OnSelectionChanged}"/>
@@ -37,34 +37,48 @@
             </Grid.ColumnDefinitions>
             <Label Grid.Column="0" FontFamily="Arial" FontSize="25" Content="{Binding QuizTitle, Mode=OneWay}" VerticalAlignment="Center" FontWeight="Bold" HorizontalAlignment="Center"/>
             <!-- tutaj binding do content-->
-            <Button Grid.Column="1" Content="Zakończ Quiz" VerticalAlignment="Center" Margin="20,0,20,0" IsEnabled="False"/>
+            <Button Grid.Column="1" Content="Zakończ Quiz" Command="{Binding StopQuiz}" IsEnabled="{Binding StopEnabled}" VerticalAlignment="Center" Margin="20,0,20,0"/>
             <!-- tutaj binding do command-->
         </Grid>
-        
-        <Grid Grid.Column="1" Grid.Row="1" Background="AliceBlue">
+
+        <Grid Grid.Column="1" Grid.Row="1" Background="AliceBlue" IsEnabled="{Binding QuizInPlay}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
+                <ColumnDefinition Width="5*"/>
                 <ColumnDefinition/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition />
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="8*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="8*"/>
                 <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
+                <RowDefinition Height="5*"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
+            <TextBlock Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="5" Text="{Binding CurrentQuestionText}" VerticalAlignment="Center" Margin="20,0,20,0" HorizontalAlignment="Center"/>
+            <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding CurrentAnswerA}" VerticalAlignment="Center" Margin="20,0,20,0" HorizontalAlignment="Center"/>
+            <CheckBox Grid.Column="2" Grid.Row="1" IsChecked="{Binding CheckedA}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Grid.Column="4" Grid.Row="1" Text="{Binding CurrentAnswerB}" VerticalAlignment="Center" Margin="20,0,20,0" HorizontalAlignment="Center"/>
+            <CheckBox Grid.Column="5" Grid.Row="1" IsChecked="{Binding CheckedB}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Grid.Column="1" Grid.Row="3" Text="{Binding CurrentAnswerC}" VerticalAlignment="Center" Margin="20,0,20,0" HorizontalAlignment="Center"/>
+            <CheckBox Grid.Column="2" Grid.Row="3" IsChecked="{Binding CheckedC}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Grid.Column="4" Grid.Row="3" Text="{Binding CurrentAnswerD}" VerticalAlignment="Center" Margin="20,0,20,0" HorizontalAlignment="Center"/>
+            <CheckBox Grid.Column="5" Grid.Row="3" IsChecked="{Binding CheckedD}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Button Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2" Content="Sprawdź Odpowiedź" Command="{Binding CheckQuestion}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,0,0"/>
+            <Button Grid.Column="4" Grid.Row="5" Content="Następne Pytanie" Command="{Binding NextQuestionCommand}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,30,0"/>
+           
         </Grid>
         <Grid Name="Button_Grid" Grid.Column="0" Grid.Row="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Button Grid.Row="0" Content="Rozpocznij Quiz" VerticalAlignment="Bottom" Margin="20,0,20,0" IsEnabled="False"/>
-            <Button Grid.Row="1" Content="Zmodyfikuj Quiz" VerticalAlignment="Center" Margin="20,0,20,0"  IsEnabled="False"/>
-            <Button Grid.Row="2" Content="Utwórz Quiz" Command="{Binding OpenGenerator}" VerticalAlignment="Top" Margin="20,0,20,0" />
 
+            </Grid.RowDefinitions>
+            <Button Grid.Row="0" Content="Rozpocznij Quiz" VerticalAlignment="Center" Margin="20,0,20,0" IsEnabled="{Binding StartEnabled}" Command="{Binding StartQuiz}"/>
         </Grid>
         <Grid Grid.Column="1" Grid.Row="2">
             <Grid.ColumnDefinitions>
@@ -72,7 +86,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Label Grid.Column="0" Content="{Binding Score, Mode=OneWay}" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Arial" FontWeight="Bold" FontSize="25"/>
-            <Label Grid.Column="1" Content="{Binding QuizTime, Mode=OneWay}" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Arial" FontWeight="Bold" FontSize="25"/>
+            <Label Grid.Column="1" Content="{Binding QuizTime}" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Arial" FontWeight="Bold" FontSize="25"/>
         </Grid>
     </Grid>
 </Window>
