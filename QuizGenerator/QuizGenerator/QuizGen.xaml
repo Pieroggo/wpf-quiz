@@ -44,7 +44,7 @@
         <ListBox Grid.Column="1" Grid.Row="1" Background="#FFF1E0FF" >
         </ListBox>
         <Label Grid.Column="2" Grid.Row="0" FontFamily="Arial" FontSize="25" Content="Odpowiedzi:" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
-        <Grid Grid.Column="2" Grid.Row="1" Background="Beige" IsEnabled="False">
+        <Grid Grid.Column="2" Grid.Row="1" Background="Beige" IsEnabled="True">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="3*"/>
                 <ColumnDefinition Width="*"/>

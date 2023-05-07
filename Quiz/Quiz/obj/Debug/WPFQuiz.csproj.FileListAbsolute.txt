@@ -14,13 +14,11 @@ D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\bin\Debug
 D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\WPFQuiz.csproj.AssemblyReference.cache
 D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\WPFQuiz.csproj.SuggestedBindingRedirects.cache
 D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\Quiz.g.cs
-D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\QuizGenerator.g.cs
 D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\App.g.cs
 D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\Quiz_Content.g.cs
 D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\Quiz_MarkupCompile.cache
 D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\Quiz_MarkupCompile.lref
 D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\Quiz.baml
-D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\QuizGenerator.baml
 D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\Quiz.g.resources
 D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\Quiz.Properties.Resources.resources
 D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\obj\Debug\WPFQuiz.csproj.GenerateResource.cache
@@ -91,3 +89,7 @@ C:\Users\maz2g\OneDrive\Desktop\Studia\Sem 4\Programowanie Obiektowe i Graficzne
 C:\Users\maz2g\OneDrive\Desktop\Studia\Sem 4\Programowanie Obiektowe i Graficzne\Lab 4 - Quiz\Quiz\Quiz\bin\Debug\System.Windows.Interactivity.dll
 C:\Users\maz2g\OneDrive\Desktop\Studia\Sem 4\Programowanie Obiektowe i Graficzne\Lab 4 - Quiz\Quiz\Quiz\bin\Debug\Microsoft.Expression.Interactions.xml
 C:\Users\maz2g\OneDrive\Desktop\Studia\Sem 4\Programowanie Obiektowe i Graficzne\Lab 4 - Quiz\Quiz\Quiz\bin\Debug\System.Windows.Interactivity.xml
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\bin\Debug\Microsoft.Expression.Interactions.dll
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\bin\Debug\System.Windows.Interactivity.dll
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\bin\Debug\Microsoft.Expression.Interactions.xml
+D:\Studia\Sem 4\Programowanie obiektowe i graficzne\wpf-quiz\Quiz\Quiz\bin\Debug\System.Windows.Interactivity.xml

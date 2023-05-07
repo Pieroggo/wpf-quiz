@@ -14,6 +14,7 @@ namespace WPFQuiz.Model
         private long id;
         public long ID { get { return id; } }
         private string _name;
+        public string Name { get { return _name; } }
         private ObservableCollection<Question> questions;
         public ObservableCollection<Question> Questions { get { return questions; } }
         public QuizInstance()
