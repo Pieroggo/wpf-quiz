@@ -68,6 +68,16 @@ namespace QuizGenerator.ViewModel
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(AnswerA)));
             }
         }
+        private bool answerAchecked = false;
+        public bool AnswerAchecked
+        {
+            get { return answerAchecked; }
+            set
+            {
+                answerAchecked = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(AnswerAchecked)));
+            }
+        }
         private string answerB = "Podaj odpowiedź B...";
         public string AnswerB
         {
@@ -76,6 +86,16 @@ namespace QuizGenerator.ViewModel
             {
                 answerB = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(AnswerB)));
+            }
+        }
+        private bool answerBchecked = false;
+        public bool AnswerBchecked
+        {
+            get { return answerBchecked; }
+            set
+            {
+                answerBchecked = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(AnswerBchecked)));
             }
         }
         private string answerC = "Podaj odpowiedź C...";
@@ -88,7 +108,16 @@ namespace QuizGenerator.ViewModel
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(AnswerC)));
             }
         }
-
+        private bool answerCchecked = false;
+        public bool AnswerCchecked
+        {
+            get { return answerCchecked; }
+            set
+            {
+                answerCchecked = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(AnswerCchecked)));
+            }
+        }
         private string answerD = "Podaj odpowiedź D...";
         public string AnswerD
         {
@@ -99,6 +128,16 @@ namespace QuizGenerator.ViewModel
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(AnswerD)));
             }
 
+        }
+        private bool answerDchecked = false;
+        public bool AnswerDchecked
+        {
+            get { return answerDchecked; }
+            set
+            {
+                answerDchecked = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(AnswerDchecked)));
+            }
         }
         private string questionName = "Podaj nazwę pytania...";
         public string QuestionName
@@ -154,7 +193,18 @@ namespace QuizGenerator.ViewModel
             }
         }
 
-        
+        private Question selectedQuestion;
+        public Question SelectedQuestion
+        {
+            get { return selectedQuestion; }
+            set
+            {
+                selectedQuestion = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(SelectedQuestion)));
+            }
+        }
+
+
 
         private ICommand setQuiz;
         public ICommand SetQuiz
@@ -168,12 +218,80 @@ namespace QuizGenerator.ViewModel
                         {
                             currentQuiz = SelectedQuiz;
                             QuestionList = currentQuiz.Questions;
+
+                            QuizTitle = currentQuiz.Name;
+
+                            AnswerAchecked = false; AnswerBchecked = false; AnswerCchecked = false; AnswerDchecked = false;
                         },
                         (o) => true
                         );
                 }
 
                 return setQuiz;
+            }
+        }
+
+        private ICommand setQuestion;
+        public ICommand SetQuestion
+        {
+            get
+            {
+                if (setQuestion == null)
+                {
+                    setQuestion = new RelayCommand(
+                        (o) =>
+                        {
+                            AnswerA = SelectedQuestion.Answer1;
+                            AnswerB = SelectedQuestion.Answer2;
+                            AnswerC = SelectedQuestion.Answer3;
+                            AnswerD = SelectedQuestion.Answer4;
+
+                            QuestionName = SelectedQuestion.QuestionText;
+
+                            long number = SelectedQuestion.RightAnswer;
+                            string binaryString = Convert.ToString(number, 2).PadLeft(4, '0'); ;
+                            
+                            if (binaryString[0] == '1')
+                            {
+                                AnswerAchecked = true;
+                            } 
+                            else
+                            {
+                                AnswerAchecked = false;
+                            }
+
+                            if (binaryString[1] == '1')
+                            {
+                                AnswerBchecked = true;
+                            }
+                            else
+                            {
+                                AnswerBchecked = false;
+                            }
+
+                            if (binaryString[2] == '1')
+                            {
+                                AnswerCchecked = true;
+                            }
+                            else
+                            {
+                                AnswerCchecked = false;
+                            }
+
+                            if (binaryString[3] == '1')
+                            {
+                                AnswerDchecked = true;
+                            }
+                            else
+                            {
+                                AnswerDchecked = false;
+                            }
+                        },
+                        (o) => true
+                        );
+                }
+
+                return setQuestion;
             }
         }
     }

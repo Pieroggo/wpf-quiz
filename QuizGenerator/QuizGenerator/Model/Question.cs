@@ -10,11 +10,17 @@ namespace QuizGenerator.Model
     {
         private long id;
         private string _questionText;
+        public string QuestionText { get { return _questionText; } }
         private string _answer1;
+        public string Answer1 { get { return _answer1; } }
         private string _answer2;
+        public string Answer2 { get { return _answer2; } }
         private string _answer3;
+        public string Answer3 { get { return _answer3; } }
         private string _answer4;
+        public string Answer4 { get { return _answer4; } }
         private long _rightAnswer;
+        public long RightAnswer { get { return _rightAnswer; } }
 
         public Question() {
             id = -1;
@@ -36,7 +42,7 @@ namespace QuizGenerator.Model
             _rightAnswer = right;
         }
         public override string ToString() {
-            return "Pytanie " + id + ": " + _questionText + " A: " + _answer1 + " B: " + _answer2 + " C: " + _answer3 + " D: " + _answer4 + " RightAnswerInteger: " + _rightAnswer;
+            return _questionText;
         }
     }
 }
