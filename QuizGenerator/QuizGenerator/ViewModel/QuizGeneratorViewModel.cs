@@ -172,13 +172,144 @@ namespace QuizGenerator.ViewModel
                     addEmptyQuiz = new RelayCommand(
                         (o) =>
                         {
-                            MainModel.MakeNewQuiz(QuizList.Count()+1, "Pusty Quiz");
+                            MainModel.MakeNewQuiz(QuizList.Count()+1, QuizTitle);
                         },
                         (o) => true
                         );
                 }
 
                 return addEmptyQuiz; 
+            }
+        }
+
+        private ICommand dropQuiz;
+        public ICommand DropQuiz
+        {
+            get
+            {
+                if (dropQuiz == null)
+                {
+                    dropQuiz = new RelayCommand(
+                        (o) =>
+                        {
+                            MainModel.RemoveQuiz(SelectedQuiz);
+                        },
+                        (o) => true
+                        );
+                }
+
+                return dropQuiz;
+            }
+        }
+
+        private ICommand addEmptyQuestion;
+        public ICommand AddEmptyQuestion
+        {
+            get
+            {
+                if (addEmptyQuestion == null)
+                {
+                    addEmptyQuestion = new RelayCommand(
+                        (o) =>
+                        {
+                            MainModel.InsertQuestion(new Question(0, QuestionName), currentQuiz.ID);
+                        },
+                        (o) => true
+                        );
+                }
+
+                return addEmptyQuestion;
+            }
+        }
+
+        private ICommand dropQuestion;
+        public ICommand DropQuestion
+        {
+            get
+            {
+                if (dropQuestion == null)
+                {
+                    dropQuestion = new RelayCommand(
+                        (o) =>
+                        {
+                            
+
+                            MainModel.RemoveQuestion(SelectedQuestion, currentQuiz.ID);
+                        },
+                        (o) => true
+                        );
+                }
+
+                return dropQuestion;
+            }
+        }
+
+        private ICommand saveQuestion;
+        public ICommand SaveQuestion
+        {
+            get
+            {
+                if (saveQuestion == null)
+                {
+                    saveQuestion = new RelayCommand(
+                        (o) =>
+                        {
+                            SelectedQuestion.QuestionText = QuestionName;
+                            SelectedQuestion.Answer1 = AnswerA;
+                            SelectedQuestion.Answer2 = AnswerB;
+                            SelectedQuestion.Answer3 = AnswerC;
+                            SelectedQuestion.Answer4 = AnswerD;
+
+                            string binaryString = "";
+
+                            if (answerAchecked)
+                            {
+                                binaryString += '1';
+                            }
+                            else
+                            {
+                                binaryString += '0';
+                            }
+
+                            if (answerBchecked)
+                            {
+                                binaryString += '1';
+                            }
+                            else
+                            {
+                                binaryString += '0';
+                            }
+
+                            if (answerCchecked)
+                            {
+                                binaryString += '1';
+                            }
+                            else
+                            {
+                                binaryString += '0';
+                            }
+
+                            if (answerDchecked)
+                            {
+                                binaryString += '1';
+                            }
+                            else
+                            {
+                                binaryString += '0';
+                            }
+
+                            int number = Convert.ToInt32(binaryString, 2);
+
+                            Console.WriteLine(binaryString);
+                            Console.WriteLine(number);
+
+                            SelectedQuestion.RightAnswer = number;
+                        },
+                        (o) => true
+                        );
+                }
+
+                return saveQuestion;
             }
         }
 
@@ -222,6 +353,8 @@ namespace QuizGenerator.ViewModel
                             QuizTitle = currentQuiz.Name;
 
                             AnswerAchecked = false; AnswerBchecked = false; AnswerCchecked = false; AnswerDchecked = false;
+
+                            QuizQuestionAmount = $"Ilość pytań: {QuestionList.Count()}";
                         },
                         (o) => true
                         );
@@ -292,6 +425,30 @@ namespace QuizGenerator.ViewModel
                 }
 
                 return setQuestion;
+            }
+        }
+
+        private ICommand resetAnswers;
+        public ICommand ResetAnswers
+        {
+            get
+            {
+                if (resetAnswers == null)
+                {
+                    resetAnswers = new RelayCommand(
+                        (o) =>
+                        {
+                            AnswerAchecked = false;
+                            AnswerBchecked = false;
+                            AnswerCchecked = false;
+                            AnswerDchecked = false;
+
+                        },
+                        (o) => true
+                        );
+                }
+
+                return resetAnswers;
             }
         }
     }

@@ -28,12 +28,29 @@ namespace QuizGenerator.Model
             _quizy.Add(newQuiz);
         }
 
+        public static void RemoveQuiz(QuizInstance quiz)
+        {
+            _quizy.Remove(quiz);
+        }
+
         public static void InsertQuestion(Question question, long targetQuizId)
         {
             foreach(var quiz in _quizy)
             {
                 if (targetQuizId == quiz.ID) {
                     quiz.Questions.Add(question);
+                }
+            }
+
+        }
+
+        public static void RemoveQuestion(Question question, long targetQuizId)
+        {
+            foreach (var quiz in _quizy)
+            {
+                if (targetQuizId == quiz.ID)
+                {
+                    quiz.Questions.Remove(question);
                 }
             }
 
