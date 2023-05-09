@@ -300,9 +300,6 @@ namespace QuizGenerator.ViewModel
 
                             int number = Convert.ToInt32(binaryString, 2);
 
-                            Console.WriteLine(binaryString);
-                            Console.WriteLine(number);
-
                             SelectedQuestion.RightAnswer = number;
                         },
                         (o) => true
