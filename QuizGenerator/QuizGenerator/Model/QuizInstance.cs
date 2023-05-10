@@ -15,7 +15,11 @@ namespace QuizGenerator.Model
         public long ID { get { return id; } }
 
         private string _name;
-        public string Name { get { return _name; } }
+        public string Name
+        {
+            get { return _name; }
+            set { _name = value; }
+        }
 
         private ObservableCollection<Question> questions;
         public ObservableCollection<Question> Questions { get { return questions; } }

@@ -181,5 +181,137 @@ namespace QuizGenerator.Model
             }
 
         }
+
+        private static void InsertNewQuestion(SQLiteConnection conn, string qText, string a1, string a2, string a3, string a4, long right, QuizInstance quiz)
+        {
+            SQLiteCommand command;
+
+            command = conn.CreateCommand();
+            command.CommandText = $"INSERT INTO Questions (Question, Answer1, Answer2, Answer3, Answer4, RightAnswer, QuizId) VALUES (\"{qText}\", \"{a1}\", \"{a2}\", \"{a3}\", \"{a4}\", {right}, {quiz.ID})";
+            command.ExecuteNonQuery();
+        }
+
+        public static void InsertNewQuestion(string qText, string a1, string a2, string a3, string a4, long right, QuizInstance quiz)
+        {
+            try
+            {
+                conn.Open();
+                InsertNewQuestion(conn, qText, a1, a2, a3, a4, right, quiz);
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+        }
+
+        private static void DropQuiz(SQLiteConnection conn, QuizInstance quiz)
+        {
+            SQLiteCommand command;
+            SQLiteCommand command2;
+
+            command = conn.CreateCommand();
+            command2 = conn.CreateCommand();
+
+            command.CommandText = $"DELETE FROM Questions WHERE QuizId = {quiz.ID}";
+            command2.CommandText = $"DELETE FROM Quizzes WHERE Id = {quiz.ID}";
+
+            command.ExecuteNonQuery();
+            command2.ExecuteNonQuery();
+        }
+
+        public static void DropQuiz(QuizInstance quiz)
+        {
+            try
+            {
+                conn.Open();
+                DropQuiz(conn, quiz);
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+        }
+
+        private static void DropQuestion(SQLiteConnection conn, Question question, QuizInstance quiz)
+        {
+            SQLiteCommand command;
+
+            command = conn.CreateCommand();
+
+            command.CommandText = $"DELETE FROM Questions WHERE Question = \"{question.QuestionText}\" AND QuizId = {quiz.ID}";
+
+            command.ExecuteNonQuery();
+        }
+
+        public static void DropQuestion(Question question, QuizInstance quiz)
+        {
+            try
+            {
+                conn.Open();
+                DropQuestion(conn, question, quiz);
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+        }
+
+        private static void SaveQuestion(SQLiteConnection conn, Question question, QuizInstance quiz, string oldText)
+        {
+            SQLiteCommand command;
+
+            command = conn.CreateCommand();
+
+            command.CommandText = $"UPDATE Questions SET Question = \"{question.QuestionText}\", Answer1 = \"{question.Answer1}\", Answer2 = \"{question.Answer2}\", Answer3 = \"{question.Answer3}\", Answer4 = \"{question.Answer4}\", RightAnswer = {question.RightAnswer} WHERE Question = \"{oldText}\" AND QuizId = {quiz.ID}";
+
+            command.ExecuteNonQuery();
+        }
+
+        public static void SaveQuestion(Question question, QuizInstance quiz, string oldText)
+        {
+            try
+            {
+                conn.Open();
+                SaveQuestion(conn, question, quiz, oldText);
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+        }
+
+        private static void SaveQuiz(SQLiteConnection conn, QuizInstance quiz)
+        {
+            SQLiteCommand command;
+
+            command = conn.CreateCommand();
+
+            command.CommandText = $"UPDATE Quizzes SET QuizName = \"{quiz.Name}\" WHERE Id = {quiz.ID}";
+
+            command.ExecuteNonQuery();
+        }
+
+        public static void SaveQuiz(QuizInstance quiz)
+        {
+            try
+            {
+                conn.Open();
+                SaveQuiz(conn, quiz);
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+        }
     }
 }

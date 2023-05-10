@@ -41,7 +41,6 @@ namespace QuizGenerator.Model
                     quiz.Questions.Add(question);
                 }
             }
-
         }
 
         public static void RemoveQuestion(Question question, long targetQuizId)

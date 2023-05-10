@@ -194,6 +194,7 @@ namespace QuizGenerator.ViewModel
                     dropQuiz = new RelayCommand(
                         (o) =>
                         {
+                            DataAccess.DropQuiz(SelectedQuiz);
                             MainModel.RemoveQuiz(SelectedQuiz);
                         },
                         (o) => true
@@ -214,7 +215,48 @@ namespace QuizGenerator.ViewModel
                     addEmptyQuestion = new RelayCommand(
                         (o) =>
                         {
-                            MainModel.InsertQuestion(new Question(0, QuestionName), currentQuiz.ID);
+                            string binaryString = "";
+
+                            if (answerAchecked)
+                            {
+                                binaryString += '1';
+                            }
+                            else
+                            {
+                                binaryString += '0';
+                            }
+
+                            if (answerBchecked)
+                            {
+                                binaryString += '1';
+                            }
+                            else
+                            {
+                                binaryString += '0';
+                            }
+
+                            if (answerCchecked)
+                            {
+                                binaryString += '1';
+                            }
+                            else
+                            {
+                                binaryString += '0';
+                            }
+
+                            if (answerDchecked)
+                            {
+                                binaryString += '1';
+                            }
+                            else
+                            {
+                                binaryString += '0';
+                            }
+
+                            int number = Convert.ToInt32(binaryString, 2);
+
+                            MainModel.InsertQuestion(new Question(0, QuestionName, AnswerA, AnswerB, AnswerC, AnswerD, number), currentQuiz.ID);
+                            DataAccess.InsertNewQuestion(QuestionName, AnswerA, AnswerB, AnswerC, AnswerD, number, currentQuiz);
                         },
                         (o) => true
                         );
@@ -234,8 +276,7 @@ namespace QuizGenerator.ViewModel
                     dropQuestion = new RelayCommand(
                         (o) =>
                         {
-                            
-
+                            DataAccess.DropQuestion(SelectedQuestion, currentQuiz);
                             MainModel.RemoveQuestion(SelectedQuestion, currentQuiz.ID);
                         },
                         (o) => true
@@ -256,6 +297,7 @@ namespace QuizGenerator.ViewModel
                     saveQuestion = new RelayCommand(
                         (o) =>
                         {
+                            string oldText = SelectedQuestion.QuestionText;
                             SelectedQuestion.QuestionText = QuestionName;
                             SelectedQuestion.Answer1 = AnswerA;
                             SelectedQuestion.Answer2 = AnswerB;
@@ -303,12 +345,41 @@ namespace QuizGenerator.ViewModel
                             int number = Convert.ToInt32(binaryString, 2);
 
                             SelectedQuestion.RightAnswer = number;
+
+                            DataAccess.SaveQuestion(SelectedQuestion, currentQuiz, oldText);
+                            currentQuiz.Questions.Clear();
+                            QuestionList = currentQuiz.Questions;
+                            DataAccess.ReadQuestionsForQuiz(currentQuiz);
                         },
                         (o) => true
                         );
                 }
 
                 return saveQuestion;
+            }
+        }
+
+        private ICommand saveQuiz;
+        public ICommand SaveQuiz
+        {
+            get
+            {
+                if (saveQuiz == null)
+                {
+                    saveQuiz = new RelayCommand(
+                        (o) =>
+                        {
+                            currentQuiz.Name = QuizTitle;
+                            DataAccess.SaveQuiz(currentQuiz);
+                            MainModel.Quizy.Clear();
+                            DataAccess.ReadQuizes();
+
+                        },
+                        (o) => true
+                        );
+                }
+
+                return saveQuiz;
             }
         }
 
