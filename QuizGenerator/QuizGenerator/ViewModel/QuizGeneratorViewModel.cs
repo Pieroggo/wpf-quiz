@@ -21,7 +21,7 @@ namespace QuizGenerator.ViewModel
         public QuizGeneratorViewModel()
         {
             model = new MainModel();
-            DataAccess.ReadData();
+            DataAccess.ReadQuizes();
             quizList = MainModel.Quizy;
     }
 
@@ -172,7 +172,9 @@ namespace QuizGenerator.ViewModel
                     addEmptyQuiz = new RelayCommand(
                         (o) =>
                         {
-                            MainModel.MakeNewQuiz(QuizList.Count()+1, QuizTitle);
+                            long quizidtmp = QuizList[QuizList.Count() - 1].ID + 1;
+                            MainModel.MakeNewQuiz(quizidtmp, QuizTitle);
+                            DataAccess.InsertNewQuiz(quizidtmp, QuizTitle);
                         },
                         (o) => true
                         );
@@ -345,6 +347,9 @@ namespace QuizGenerator.ViewModel
                         (o) =>
                         {
                             currentQuiz = SelectedQuiz;
+
+                            DataAccess.ReadQuestionsForQuiz(currentQuiz);
+
                             QuestionList = currentQuiz.Questions;
 
                             QuizTitle = currentQuiz.Name;
