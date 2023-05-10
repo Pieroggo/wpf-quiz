@@ -162,6 +162,28 @@ namespace QuizGenerator.ViewModel
 
         }
 
+        private bool setQuestionEnabled = false;
+        public bool SetQuestionEnabled
+        {
+            get { return setQuestionEnabled; }
+            set
+            {
+                setQuestionEnabled = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(SetQuestionEnabled)));
+            }
+        }
+
+        private bool setQuizEnabled = false;
+        public bool SetQuizEnabled
+        {
+            get { return setQuizEnabled; }
+            set
+            {
+                setQuizEnabled = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(SetQuizEnabled)));
+            }
+        }
+
         private ICommand addEmptyQuiz;
         public ICommand AddEmptyQuiz
         {
@@ -278,6 +300,10 @@ namespace QuizGenerator.ViewModel
                         {
                             DataAccess.DropQuestion(SelectedQuestion, currentQuiz);
                             MainModel.RemoveQuestion(SelectedQuestion, currentQuiz.ID);
+
+                            currentQuiz.Questions.Clear();
+                            QuestionList = currentQuiz.Questions;
+                            DataAccess.ReadQuestionsForQuiz(currentQuiz);
                         },
                         (o) => true
                         );
@@ -428,6 +454,8 @@ namespace QuizGenerator.ViewModel
                             AnswerAchecked = false; AnswerBchecked = false; AnswerCchecked = false; AnswerDchecked = false;
 
                             QuizQuestionAmount = $"Ilość pytań: {QuestionList.Count()}";
+
+                            SetQuizEnabled = true;
                         },
                         (o) => true
                         );
@@ -492,6 +520,8 @@ namespace QuizGenerator.ViewModel
                             {
                                 AnswerDchecked = false;
                             }
+
+                            SetQuestionEnabled = true;
                         },
                         (o) => true
                         );
