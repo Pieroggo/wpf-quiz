@@ -36,10 +36,7 @@ namespace QuizGenerator.Model
             _name = name;
             this.questions = questions;
         }
-<<<<<<< HEAD
-=======
 
->>>>>>> wybielak
         public override string ToString()
         {
             string str=id + " - " + _name;

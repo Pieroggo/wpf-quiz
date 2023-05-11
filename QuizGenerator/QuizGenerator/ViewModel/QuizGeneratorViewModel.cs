@@ -21,19 +21,11 @@ namespace QuizGenerator.ViewModel
         public QuizGeneratorViewModel()
         {
             model = new MainModel();
-<<<<<<< HEAD
-            DataAccess.ReadData();
-            quizList = MainModel.Quizy;
-            
-        }
-        private ObservableCollection<QuizInstance> quizList = new ObservableCollection<QuizInstance>();
-=======
             DataAccess.ReadQuizes();
             quizList = MainModel.Quizy;
     }
 
         private ObservableCollection<QuizInstance> quizList;
->>>>>>> wybielak
         public ObservableCollection<QuizInstance> QuizList
         {
             get { return quizList; }
@@ -43,8 +35,6 @@ namespace QuizGenerator.ViewModel
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(QuizList)));
             }
         }
-<<<<<<< HEAD
-=======
 
         private ObservableCollection<Question> questionList;
         public ObservableCollection<Question> QuestionList
@@ -56,7 +46,6 @@ namespace QuizGenerator.ViewModel
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(QuestionList)));
             }
         }
->>>>>>> wybielak
 
         private string quizTitle = "Podaj nazwę...";
         public string QuizTitle
