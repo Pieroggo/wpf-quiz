@@ -18,13 +18,21 @@ namespace QuizGenerator.Model
         {
             get { return _quizy; }
         }
+
         public MainModel() { _quizy = new ObservableCollection<QuizInstance>(); }
         public MainModel(ObservableCollection<QuizInstance> list) { _quizy = list; }
+
         public static void MakeNewQuiz(long id, string quizName)
         {
             QuizInstance newQuiz = new QuizInstance(id,quizName,new ObservableCollection<Question>());
             _quizy.Add(newQuiz);
         }
+
+        public static void RemoveQuiz(QuizInstance quiz)
+        {
+            _quizy.Remove(quiz);
+        }
+
         public static void InsertQuestion(Question question, long targetQuizId)
         {
             foreach(var quiz in _quizy)
@@ -33,8 +41,20 @@ namespace QuizGenerator.Model
                     quiz.Questions.Add(question);
                 }
             }
+        }
+
+        public static void RemoveQuestion(Question question, long targetQuizId)
+        {
+            foreach (var quiz in _quizy)
+            {
+                if (targetQuizId == quiz.ID)
+                {
+                    quiz.Questions.Remove(question);
+                }
+            }
 
         }
+
         public static string ReturnContentString() {
             string ret = "";
             foreach (var quiz in _quizy) {

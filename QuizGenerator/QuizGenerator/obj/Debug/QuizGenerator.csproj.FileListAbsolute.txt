@@ -27,3 +27,36 @@ C:\Users\maz2g\OneDrive\Desktop\Studia\Sem 4\Programowanie Obiektowe i Graficzne
 C:\Users\maz2g\OneDrive\Desktop\Studia\Sem 4\Programowanie Obiektowe i Graficzne\Lab 4 - Quiz\QuizGenerator\QuizGenerator\obj\Debug\QuizGen.g.cs
 C:\Users\maz2g\OneDrive\Desktop\Studia\Sem 4\Programowanie Obiektowe i Graficzne\Lab 4 - Quiz\QuizGenerator\QuizGenerator\obj\Debug\QuizGen.baml
 C:\Users\maz2g\OneDrive\Desktop\Studia\Sem 4\Programowanie Obiektowe i Graficzne\Lab 4 - Quiz\QuizGenerator\QuizGenerator\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\bin\Debug\x86\sqlite3.dll
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\bin\Debug\x64\sqlite3.dll
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\bin\Debug\QuizGenerator.exe.config
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\bin\Debug\QuizGenerator.exe
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\bin\Debug\QuizGenerator.pdb
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\bin\Debug\EntityFramework.dll
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\bin\Debug\EntityFramework.SqlServer.dll
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\bin\Debug\System.Data.SQLite.dll
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\bin\Debug\System.Data.SQLite.EF6.dll
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\bin\Debug\System.Data.SQLite.Linq.dll
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\bin\Debug\EntityFramework.xml
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\bin\Debug\EntityFramework.SqlServer.xml
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\bin\Debug\System.Data.SQLite.xml
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\obj\Debug\QuizGenerator.csproj.AssemblyReference.cache
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\obj\Debug\QuizGenerator.csproj.SuggestedBindingRedirects.cache
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\obj\Debug\QuizGen.g.cs
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\obj\Debug\App.g.cs
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\obj\Debug\QuizGenerator_Content.g.cs
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\obj\Debug\QuizGenerator_MarkupCompile.cache
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\obj\Debug\QuizGenerator_MarkupCompile.lref
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\obj\Debug\QuizGen.baml
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\obj\Debug\QuizGenerator.g.resources
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\obj\Debug\QuizGenerator.Properties.Resources.resources
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\obj\Debug\QuizGenerator.csproj.GenerateResource.cache
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\obj\Debug\QuizGenerator.csproj.CoreCompileInputs.cache
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\obj\Debug\QuizGenerator.csproj.CopyComplete
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\obj\Debug\QuizGenerator.exe
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\obj\Debug\QuizGenerator.pdb
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\bin\Debug\Microsoft.Expression.Interactions.dll
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\bin\Debug\System.Windows.Interactivity.dll
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\bin\Debug\Microsoft.Expression.Interactions.xml
+E:\Studia\3. Programowanie obiektowe i graficzne\lab\wpf\Quiz MVVM\wpf-quiz\QuizGenerator\QuizGenerator\bin\Debug\System.Windows.Interactivity.xml

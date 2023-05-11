@@ -22,18 +22,20 @@
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <Label Grid.Column="0" Grid.Row="0" Content="Lista Quizów:" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial" FontSize="15" FontWeight="Bold"/>
-        <ListBox Grid.Column="0" Grid.Row="1" Background="CadetBlue" ItemsSource="{Binding QuizList}"/>
-        <Grid Grid.Column="0" Grid.Row="2" Margin="0,0,0,0" >
+        <ListBox Grid.Column="0" Grid.Row="1" Background="CadetBlue" ItemsSource="{Binding QuizList}" SelectedItem="{Binding SelectedQuiz}">
+            
+        </ListBox>
+                <Grid Grid.Column="0" Grid.Row="2" Margin="0,0,0,0" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Button Grid.Row="0" Content="Utwórz Quiz" VerticalAlignment="Bottom" Margin="20,0,20,0"/>
-            <Button Grid.Row="1" Content="Wybierz Quiz" VerticalAlignment="Center" Margin="20,0,20,0"/>
-            <Button Grid.Row="2" Content="Usuń Quiz" VerticalAlignment="Top" Margin="20,0,20,0"/>
+            <Button Grid.Row="0" Content="Utwórz Quiz" VerticalAlignment="Bottom" Margin="20,0,20,0" Command="{Binding AddEmptyQuiz}"/>
+            <Button Grid.Row="1" Content="Wybierz Quiz" VerticalAlignment="Center" Margin="20,0,20,0" Command="{Binding SetQuiz}"/>
+            <Button Grid.Row="2" Content="Usuń Quiz" VerticalAlignment="Top" Margin="20,0,20,0" Command="{Binding DropQuiz}"/>
         </Grid>
-                <Grid Grid.Column="1" Grid.Row="0">
+            <Grid Grid.Column="1" Grid.Row="0" IsEnabled="{Binding SetQuizEnabled}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="10*"/>
@@ -41,10 +43,10 @@
             <Label Content="Nazwa:" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <TextBox Grid.Column="1" Text="{Binding QuizTitle}" VerticalAlignment="Center" Margin="0,0,10,0"/>
         </Grid>
-        <ListBox Grid.Column="1" Grid.Row="1" Background="#FFF1E0FF" >
+        <ListBox Grid.Column="1" Grid.Row="1" Background="#FFF1E0FF" ItemsSource="{Binding QuestionList}" SelectedItem="{Binding SelectedQuestion}">
         </ListBox>
         <Label Grid.Column="2" Grid.Row="0" FontFamily="Arial" FontSize="25" Content="Odpowiedzi:" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
-        <Grid Grid.Column="2" Grid.Row="1" Background="Beige" IsEnabled="False">
+        <Grid Grid.Column="2" Grid.Row="1" Background="Beige" IsEnabled="{Binding SetQuestionEnabled}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="3*"/>
                 <ColumnDefinition Width="*"/>
@@ -62,7 +64,7 @@
                     <RowDefinition Height="3*"/>
                 </Grid.RowDefinitions>
                 <Label Grid.Row="0" Content="Prawda?" FontSize="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
-                <RadioButton Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <RadioButton Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="{Binding AnswerAchecked}" />
             </Grid>
             <TextBox Text="{Binding AnswerB}" Grid.Column="0" Grid.Row="1"/>
             <Grid Name="IsCorrect2" Grid.Column="1" Grid.Row="1">
@@ -71,7 +73,7 @@
                     <RowDefinition Height="3*"/>
                 </Grid.RowDefinitions>
                 <Label Grid.Row="0" Content="Prawda?" FontSize="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
-                <RadioButton Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <RadioButton Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="{Binding AnswerBchecked}"/>
             </Grid>
             <TextBox Text="{Binding AnswerC}" Grid.Column="0" Grid.Row="2"/>
             <Grid Name="IsCorrect3" Grid.Column="1" Grid.Row="2">
@@ -80,7 +82,7 @@
                     <RowDefinition Height="3*"/>
                 </Grid.RowDefinitions>
                 <Label Grid.Row="0" Content="Prawda?" FontSize="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
-                <RadioButton Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <RadioButton Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="{Binding AnswerCchecked}"/>
             </Grid>
             <TextBox Text="{Binding AnswerD}" Grid.Column="0" Grid.Row="3"/>
             <Grid Name="IsCorrect4" Grid.Column="1" Grid.Row="3">
@@ -89,7 +91,7 @@
                     <RowDefinition Height="3*"/>
                 </Grid.RowDefinitions>
                 <Label Grid.Row="0" Content="Prawda?" FontSize="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
-                <RadioButton Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <RadioButton Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="{Binding AnswerDchecked}"/>
             </Grid>
         </Grid>
         <Grid Name="Button_Grid" Grid.Column="1" Grid.Row="2">
@@ -101,10 +103,18 @@
                 <ColumnDefinition Width="3*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <TextBox Grid.Row="0" Grid.Column="0" Text="{Binding QuestionName}" VerticalAlignment="Bottom" Margin="20,0,20,7"/>
-            <Button Grid.Row="1" Grid.Column="0" Content="Dodaj pytanie" VerticalAlignment="Top" Margin="20,7,20,0" />
-            <Button Grid.Row="0" Grid.Column="1"  Content="Usuń pytanie" VerticalAlignment="Bottom" Margin="20,0,20,7" IsEnabled="False" />
-            <Button Grid.Row="1" Grid.Column="1" Content="Zapisz Pytanie" VerticalAlignment="Top" Margin="20,7,20,0" IsEnabled="False" />
+            <TextBox Grid.Row="0" Grid.Column="0" Text="{Binding QuestionName}" VerticalAlignment="Bottom" Margin="20,0,20,7" IsEnabled="{Binding SetQuizEnabled}" />
+            <Grid Grid.Row="1" Grid.Column="0" IsEnabled="{Binding SetQuizEnabled}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="1" Grid.Column="0" Content="Dodaj pytanie" VerticalAlignment="Top" Margin="20,7,20,0" Command="{Binding AddEmptyQuestion}"/>
+                <Button Grid.Row="1" Grid.Column="1" Content="Wybierz pytanie" VerticalAlignment="Top" Margin="20,7,20,0" Command="{Binding SetQuestion}"/>
+            </Grid>
+
+            <Button Grid.Row="0" Grid.Column="1"  Content="Usuń pytanie" VerticalAlignment="Bottom" Margin="20,0,20,7" IsEnabled="{Binding SetQuizEnabled}" Command="{Binding DropQuestion}"/>
+            <Button Grid.Row="1" Grid.Column="1" Content="Resetuj odpowiedzi" VerticalAlignment="Top" Margin="20,7,20,0" IsEnabled="{Binding SetQuestionEnabled}" Command="{Binding ResetAnswers}"/>
         </Grid>
         <Grid Grid.Column="2" Grid.Row="2">
             <Grid.RowDefinitions>
@@ -112,7 +122,14 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Label Grid.Row="0" Content="{Binding QuizQuestionAmount}" VerticalAlignment="Bottom" Margin="20,7,20,7" HorizontalAlignment="Center"/>
-            <Button Grid.Row="1" Content="Zapisz Quiz" VerticalAlignment="Top" Margin="20,7,20,0"/>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="1" Content="Zapisz Quiz" VerticalAlignment="Top" Margin="20,7,20,0" IsEnabled="{Binding SetQuizEnabled}" Command="{Binding SaveQuiz}"/>
+                <Button Grid.Column="0" Content="Zapisz Pytanie" VerticalAlignment="Top" Margin="5,7,5,0" IsEnabled="{Binding SetQuestionEnabled}" Command="{Binding SaveQuestion}"/>
+            </Grid>
         </Grid>
 
     </Grid>
